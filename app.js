@@ -19,3 +19,22 @@ Initializing, connecting, & formatting the modular application.
 const application = express();
 //Ensuring that the Pug HTML template engine is used to render customer-facing views in the application.
 application.set('view engine', 'pug');
+//Plugging in the HTTP routes to the application.
+const leadRoutes = require('./routes');
+//This activates the body-parser middleware.
+application.use(bodyParser.urlencoded({ extended: false }));
+//This uses the routes contained in the /routes directory.
+application.use(leadRoutes);
+
+
+
+/*
+
+*/
+
+//
+application.listen(3000, () => {
+    console.log('Spinning tracks on station 3000 up in this Localhost');
+});
+
+module.exports = application;
