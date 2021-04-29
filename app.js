@@ -25,7 +25,8 @@ const leadRoutes = require('./routes');
 application.use(bodyParser.urlencoded({ extended: false }));
 //This uses the routes contained in the /routes directory.
 application.use(leadRoutes);
-
+//
+application.use('/static', express.static('public'));
 
 
 /*
