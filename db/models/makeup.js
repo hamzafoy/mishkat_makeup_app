@@ -16,6 +16,22 @@ module.exports = (sequelize) => {
         description: {
             type: Sequelize.STRING(10000),
             allowNull: false
+        },
+        favorable: {
+            type: Sequelize.BOOLEAN,
+            allowNull: false
+        },
+        brand: {
+            type: Sequelize.STRING(2000),
+            allowNull: false
+        },
+        price: {
+            type: Sequelize.INTEGER,
+            allowNull: false
+        },
+        type: {
+            type: Sequelize.STRING(1000),
+            allowNull: false
         }
     }, {sequelize});
 
