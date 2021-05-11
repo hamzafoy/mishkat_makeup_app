@@ -11,7 +11,12 @@ module.exports = (sequelize) => {
         },
         name: {
             type: Sequelize.STRING(10000),
-            allowNull: false
+            allowNull: false,
+            validate: {
+                notEmpty: {
+                    msg: 'You must enter a value, all makeup has names!'
+                }
+            }
         },
         description: {
             type: Sequelize.STRING(10000),
