@@ -1,0 +1,26 @@
+{
+    "Born this Way": {
+        "name": "Born this Way",
+        "brand": "Too Faced",
+        "type": "Foundation",
+        "price": 40,
+        "shade": "Golden Beige",
+        "description": "A foundation with a radiant finish. This foundation sets well, stays well, and doesn't cake.",
+        "approve": true,
+        "recommend": true,
+        "price-point": "high",
+        "tags": [ "radiant, natural, satin, golden" ]
+    },
+    "Kush High Volumizing Mascara": {
+        "name": "Kush High Volumizing Mascara",
+        "brand": "Milk",
+        "type": "mascara",
+        "price": 25,
+        "shade": "Black",
+        "description": "A lightweight mascara that volumizes with no flaking.",
+        "approve": true,
+        "recommend": true,
+        "price-point": "high",
+        "tags": [ "light", "no-headache", "easy-to-remove", "no-flake" ]
+    }
+}

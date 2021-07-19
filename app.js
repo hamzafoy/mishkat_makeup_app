@@ -29,8 +29,9 @@ application.use(leadRoutes);
 application.use('/static', express.static('public'));
 
 
-/*
 
+/*
+Listening on port 3000
 */
 
 //
