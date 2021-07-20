@@ -4,7 +4,7 @@ body, html {
 }
 
 img {
-    height: 100vh;
+    height: 75vh;
     display: flex;
     margin: 0 auto;
 }

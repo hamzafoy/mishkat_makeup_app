@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const fs = require('fs');
 
 //This is a convenient function that handles async/await.
 function asyncHandler(cb){
@@ -13,7 +14,23 @@ function asyncHandler(cb){
     }
 }
 
+/* fs.readFile('../db/makeup.json', 'utf8', (err, jsonString) => {
+    if (err) {
+        console.log('File read failed:', err)
+        return;
+    }
+    try {
+        const makeup = JSON.parse(jsonString);
+        console.log("Makeup brand is:", makeup.item1.brand);
+    } catch (err) {
+        console.log("Error parsing JSON string:", err);
+    }
+}) */
+
+
+
 router.get('/', asyncHandler(async (req, res) => {
+    
     res.render('index');
 }));
 

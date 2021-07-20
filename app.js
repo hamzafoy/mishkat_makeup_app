@@ -8,6 +8,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 //Requiring Sequelize which will serve as the ORM between the app and the MySQL database.
 const Sequelize = require('sequelize');
+//Requiring the file system native module for Node.js
+const fs = require('fs');
 
 
 

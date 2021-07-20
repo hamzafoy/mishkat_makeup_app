@@ -1,5 +1,5 @@
 {
-    "Born this Way": {
+    "item1": {
         "name": "Born this Way",
         "brand": "Too Faced",
         "type": "Foundation",
@@ -11,7 +11,7 @@
         "price-point": "high",
         "tags": [ "radiant, natural, satin, golden" ]
     },
-    "Kush High Volumizing Mascara": {
+    "item2": {
         "name": "Kush High Volumizing Mascara",
         "brand": "Milk",
         "type": "mascara",
