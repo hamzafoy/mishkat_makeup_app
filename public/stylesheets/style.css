@@ -22,11 +22,17 @@ img {
     height: 100vh;
     background-color: #fcfcfc;
     width: 30%;
+    font-family: 'Grand Hotel', cursive;
 }
 
 .sidebarnav img {
     height: 45%;
     width: 90%;
+}
+
+.sidebarnav p {
+    text-align: center;
+    font-size: 1.65em;
 }
 
 .main-content {
