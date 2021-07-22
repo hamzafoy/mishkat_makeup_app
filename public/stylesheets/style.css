@@ -15,18 +15,29 @@ img {
 
 .app {
     display: flex;
+    flex-direction: row-reverse;
 }
 
 .sidebarnav {
     height: 100vh;
-    background-color: lightcoral;
-    width: 20%;
+    background-color: #fcfcfc;
+    width: 30%;
+}
+
+.sidebarnav img {
+    height: 45%;
+    width: 90%;
 }
 
 .main-content {
     height: 100vh;
-    width: 80%;
-    overflow: scroll;
-    background-color: lightseagreen;
+    width: 70%;
+    overflow-y: scroll;
+    scrollbar-width: none; /* For Firefox Users */
+    background-color: #ededed;
     font-size: 18px;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
