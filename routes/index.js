@@ -32,8 +32,8 @@ function asyncHandler(cb){
 
 router.get('/', asyncHandler(async (req, res) => {
     
-    res.render('index', {
-        name: 'This is a test',
+    res.render('home', {
+        name: makeupData.name,
         brand: makeupData.brand
     });
 }));
