@@ -47,6 +47,7 @@ img {
     margin: .25em 0;
     font-family: 'Shadows Into Light Two', cursive;
     font-size: 1.25em;
+    border: 2.5px double #383957;
 }
 
 .sidebar-nav p {
@@ -64,8 +65,13 @@ img {
     overflow-y: scroll;
     scrollbar-width: none; /* For Firefox Users */
     background-color: #DEE0E3;
-    font-size: 18px;
     border-right: 4px double #EAECEC;
+}
+
+.main-content p {
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 1.5em;
+    margin: 0 1vw;
 }
 
 ::-webkit-scrollbar {
