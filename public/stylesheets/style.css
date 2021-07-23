@@ -18,30 +18,54 @@ img {
     flex-direction: row-reverse;
 }
 
-.sidebarnav {
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100vh;
-    background-color: #fcfcfc;
-    width: 30%;
-    font-family: 'Grand Hotel', cursive;
+    background-color: #F5F5F5;
+    width: 25%;
+    border-left: 4px double #EAECEC;
 }
 
-.sidebarnav img {
+.sidebar-nav img {
     height: 45%;
-    width: 90%;
+    width: 95%;
 }
 
-.sidebarnav p {
+.sidebar-nav__buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-nav__buttons button {
+    width: 50%;
+    align-self: center;
+    background-color: #494C6F;
+    color: #EAECEC;
+    padding: 1.25vh 0;
+    margin: .25em 0;
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 1.25em;
+}
+
+.sidebar-nav p {
     text-align: center;
-    font-size: 1.65em;
+    font-size: 2.55em;
+    line-height: 1.05em;
+    color: #383957;
+    margin: 0 0 2vh;
+    font-family: 'Grand Hotel', cursive;
 }
 
 .main-content {
     height: 100vh;
-    width: 70%;
+    width: 75%;
     overflow-y: scroll;
     scrollbar-width: none; /* For Firefox Users */
-    background-color: #ededed;
+    background-color: #DEE0E3;
     font-size: 18px;
+    border-right: 4px double #EAECEC;
 }
 
 ::-webkit-scrollbar {
