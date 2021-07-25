@@ -1,22 +1,24 @@
+/*--- Base & Reset Stylings ---*/
+
 * {
     box-sizing: border-box;
 }
+
 
 body, html {
     margin: 0;
     padding: 0;
 }
 
-img {
-    height: 75vh;
-    display: flex;
-    margin: 0 auto;
-}
+
+
+/*--- Side-Nav-Layout Partial ---*/
 
 .app {
     display: flex;
     flex-direction: row-reverse;
 }
+
 
 .sidebar-nav {
     display: flex;
@@ -28,15 +30,24 @@ img {
     border-left: 4px double #EAECEC;
 }
 
-.sidebar-nav img {
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+.sidebar-nav__img {
     height: 45%;
     width: 95%;
+    margin: 0 auto;
 }
+
 
 .sidebar-nav__buttons {
     display: flex;
     flex-direction: column;
 }
+
 
 .sidebar-nav__buttons button {
     width: 50%;
@@ -50,6 +61,7 @@ img {
     border: 2.5px double #383957;
 }
 
+
 .sidebar-nav p {
     text-align: center;
     font-size: 2.55em;
@@ -58,6 +70,7 @@ img {
     margin: 0 0 2vh;
     font-family: 'Grand Hotel', cursive;
 }
+
 
 .main-content {
     height: 100vh;
@@ -68,11 +81,16 @@ img {
     border-right: 4px double #EAECEC;
 }
 
-.main-content img {
+
+
+/*--- Home.pug Styling ---*/
+
+.home-foto {
     width: 100%;
     height: 100%;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
+
+
+/*--- About.pug Styling ---*/
+

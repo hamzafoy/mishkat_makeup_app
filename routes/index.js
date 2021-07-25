@@ -31,8 +31,14 @@ function asyncHandler(cb){
 
 
 router.get('/', asyncHandler(async (req, res) => {
-    
     res.render('home', {
+        name: makeupData.name,
+        brand: makeupData.brand
+    });
+}));
+
+router.get('/about', asyncHandler(async (req, res) => {
+    res.render('about', {
         name: makeupData.name,
         brand: makeupData.brand
     });
