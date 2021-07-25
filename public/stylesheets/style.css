@@ -49,7 +49,7 @@ body, html {
 }
 
 
-.sidebar-nav__buttons button {
+.sidebar-nav-button {
     width: 50%;
     align-self: center;
     background-color: #494C6F;
@@ -59,6 +59,8 @@ body, html {
     font-family: 'Shadows Into Light Two', cursive;
     font-size: 1.25em;
     border: 2.5px double #383957;
+    text-decoration: none;
+    text-align: center;
 }
 
 
