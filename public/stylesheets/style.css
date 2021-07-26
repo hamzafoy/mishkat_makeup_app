@@ -96,3 +96,24 @@ body, html {
 
 /*--- About.pug Styling ---*/
 
+
+
+/*--- Reviews.pug Styling ---*/
+
+.reviews {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.reviews__section {
+    width: 22.5%;
+    background-color: #F5F5F5;
+    border: 4px double #EAECEC;
+}
+
+.reviews-text {
+    margin: .45em 0;
+    font-size: 1.05em;
+    font-family: 'Shadows Into Light Two', cursive;
+}
