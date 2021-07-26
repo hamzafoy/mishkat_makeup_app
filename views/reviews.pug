@@ -2,5 +2,10 @@ extends includes/side-nav-layout.pug
 
 block content
     h1.reviews-heading Makeup Reviews
-    p Name: #{name}
-    p Brand: #{brand}
+    div.reviews
+        each val in makeupData
+            section.reviews__section
+                p= val.name
+                p= val.brand 
+                p= val.type 
+                p= val.description
