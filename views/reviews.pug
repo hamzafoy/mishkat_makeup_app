@@ -5,8 +5,13 @@ block content
     div.reviews
         each val in makeupData
             section.reviews__section
-                p.reviews-text= 'Makeup Name: ' + val.name
-                p.reviews-text= 'Brand: ' + val.brand 
-                p.reviews-text= 'Type of Makeup: ' + val.type 
-                p.reviews-text= 'Description: ' + val.description
-                p.reviews-text= 'Price: $' + val.price
+                p.reviews-text Makeup Name 
+                    p.reviews-text-data= val.name
+                p.reviews-text Brand
+                    p.reviews-text-data= val.brand 
+                p.reviews-text Type of Makeup 
+                    p.reviews-text-data= val.type 
+                p.reviews-text Description 
+                    p.reviews-text-desc= val.description 
+                p.reviews-text Price 
+                    p.reviews-text-data= '$' + val.price

@@ -117,24 +117,42 @@ body, html {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 
 .reviews__section {
     width: 22.5%;
+    margin: 5vh 0 0;
+    padding: 1vh 1vw;
     background-color: #F5F5F5;
     border: 4px double #EAECEC;
-    padding: 1vh 1vw;
 }
 
 
 .reviews-text {
     margin: .45em 0;
+    padding: 0 0;
     font-size: 1.05em;
     font-family: 'Shadows Into Light Two', cursive;
     font-weight: bold;
+    text-decoration: underline;
 }
 
-val {
-    font-weight: normal;
+
+.reviews-text-data {
+    display: inline;
+    margin: 0 0;
+    padding: 0 0;
+    font-size: .95em;
+    font-family: 'Shadows Into Light Two', cursive;
+}
+
+
+.reviews-text-desc {
+    display: inline;
+    margin: 0 0;
+    padding: 0 0;
+    font-size: .85em;
+    font-family: 'Shadows Into Light Two', cursive;
 }
