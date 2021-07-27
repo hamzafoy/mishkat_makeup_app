@@ -21,6 +21,23 @@ body, html {
 }
 
 
+.blogs,
+.login {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.blogs__section {
+    align-self: center;
+    width: 82.5%;
+    margin: 5vh 0 0;
+    padding: 1vh 1vw;
+    background-color: #F5F5F5;
+    border: 4px double #EAECEC;
+}
+
+
 
 /*--- Side-Nav-Layout Partial ---*/
 
@@ -158,22 +175,6 @@ body, html {
 
 /*--- Blog.pug Styling ---*/
 
-.blogs {
-    display: flex;
-    flex-direction: column;
-}
-
-
-.blogs__section {
-    align-self: center;
-    width: 82.5%;
-    margin: 5vh 0 0;
-    padding: 1vh 1vw;
-    background-color: #F5F5F5;
-    border: 4px double #EAECEC;
-}
-
-
 .blogs-heading {
     margin: .45em 0;
     padding: 0 0;
@@ -190,4 +191,26 @@ body, html {
     padding: 0 0;
     font-size: .95em;
     font-family: 'Shadows Into Light Two', cursive;
+}
+
+
+
+/*--- Admin.pug Styling ---*/
+
+.login__panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    width: 67.5%;
+    margin: 5vh 0 0;
+    padding: 1vh 1vw;
+    background-color: #F5F5F5;
+    border: 4px double #EAECEC;
+}
+
+.login-input {
+    align-self: center;
+    width: 25%;
+    background-color: #CECFDF;
 }
