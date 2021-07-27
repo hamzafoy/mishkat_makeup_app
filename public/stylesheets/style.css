@@ -96,9 +96,22 @@ body, html {
 
 /*--- About.pug Styling ---*/
 
+.about-heading {
+    font-family: 'Grand Hotel', cursive;
+    font-size: 3.25em;
+    text-align: center;
+}
+
 
 
 /*--- Reviews.pug Styling ---*/
+
+.reviews-heading {
+    font-family: 'Grand Hotel', cursive;
+    font-size: 3.25em;
+    text-align: center;
+}
+
 
 .reviews {
     display: flex;
@@ -106,14 +119,22 @@ body, html {
     justify-content: space-around;
 }
 
+
 .reviews__section {
     width: 22.5%;
     background-color: #F5F5F5;
     border: 4px double #EAECEC;
+    padding: 1vh 1vw;
 }
+
 
 .reviews-text {
     margin: .45em 0;
     font-size: 1.05em;
     font-family: 'Shadows Into Light Two', cursive;
+    font-weight: bold;
+}
+
+val {
+    font-weight: normal;
 }
