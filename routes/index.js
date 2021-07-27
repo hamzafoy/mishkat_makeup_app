@@ -47,4 +47,8 @@ router.get('/blog', asyncHandler(async (req, res) => {
     res.render('blog', {blogData: blogData});
 }));
 
+router.get('/admin', asyncHandler(async (req, res) => {
+    res.render('admin');
+}));
+
 module.exports = router;
