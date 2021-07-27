@@ -42,11 +42,8 @@ router.get('/reviews', asyncHandler(async (req, res) => {
     res.render('reviews', {makeupData: makeupData});
 }));
 
-module.exports = router;
+router.get('/blog', asyncHandler(async (req, res) => {
+    res.render('blog');
+}));
 
-/* {
-    name: makeupData[0].name,
-    brand: makeupData[0].brand,
-    type: makeupData[0].type,
-    desc: makeupData[0].description
-} */
+module.exports = router;

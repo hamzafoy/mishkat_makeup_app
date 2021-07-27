@@ -1,4 +1,4 @@
-/*--- Base & Reset Stylings ---*/
+/*--- General, Base, & Reset Stylings ---*/
 
 * {
     box-sizing: border-box;
@@ -8,6 +8,15 @@
 body, html {
     margin: 0;
     padding: 0;
+}
+
+
+.about-heading,
+.reviews-heading,
+.blog-heading {
+    font-family: 'Grand Hotel', cursive;
+    font-size: 3.25em;
+    text-align: center;
 }
 
 
@@ -96,22 +105,9 @@ body, html {
 
 /*--- About.pug Styling ---*/
 
-.about-heading {
-    font-family: 'Grand Hotel', cursive;
-    font-size: 3.25em;
-    text-align: center;
-}
-
 
 
 /*--- Reviews.pug Styling ---*/
-
-.reviews-heading {
-    font-family: 'Grand Hotel', cursive;
-    font-size: 3.25em;
-    text-align: center;
-}
-
 
 .reviews {
     display: flex;
