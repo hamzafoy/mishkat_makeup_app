@@ -2,3 +2,10 @@ extends includes/side-nav-layout.pug
 
 block content
     h1.blog-heading Blog
+    div.blogs
+        each val in blogData
+            section.blogs__section
+                p.blogs-heading Title 
+                    p.blogs-text-data= val.title 
+                p.blogs-heading Entry 
+                    p.blogs-text-data= val.post

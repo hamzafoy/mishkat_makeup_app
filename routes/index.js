@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const fs = require('fs');
 const makeupData = require('../db/makeup.json');
+const blogData = require('../db/blog.json')
 
 //This is a convenient function that handles async/await.
 function asyncHandler(cb){
@@ -43,7 +44,7 @@ router.get('/reviews', asyncHandler(async (req, res) => {
 }));
 
 router.get('/blog', asyncHandler(async (req, res) => {
-    res.render('blog');
+    res.render('blog', {blogData: blogData});
 }));
 
 module.exports = router;
