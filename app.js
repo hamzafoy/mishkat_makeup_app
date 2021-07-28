@@ -10,7 +10,10 @@ const bodyParser = require('body-parser');
 const Sequelize = require('sequelize');
 //Requiring the file system native module for Node.js
 const fs = require('fs');
-
+//
+const cookieParser = require('cookie-parser');
+//
+require('dotenv').config();
 
 
 /*
@@ -25,6 +28,8 @@ application.set('view engine', 'pug');
 const leadRoutes = require('./routes');
 //This activates the body-parser middleware.
 application.use(bodyParser.urlencoded({ extended: false }));
+//
+application.use(cookieParser());
 //This uses the routes contained in the /routes directory.
 application.use(leadRoutes);
 //

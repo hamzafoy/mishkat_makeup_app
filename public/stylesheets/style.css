@@ -217,13 +217,23 @@ body, html {
 }
 
 
+.login__panel form {
+    display: flex;
+    flex-direction: column;
+}
+
+
 .login-input {
     align-self: center;
     width: 25%;
     background-color: #CECFDF;
     margin: 1vh 0 0;
+    border: .125px solid #494C6F;
+    outline: none;
 }
+
 
 .login-input:last-of-type {
     margin: 1vh 0 3.5vh;
+    border: 3.25px double #494C6F;
 }

@@ -5,13 +5,20 @@ block content
     div.login
         section.login__panel
             h1.login-panel-heading Welcome Admin!
-            input(
-                type='text'
-                class='login-input'
-                placeholder='Type username here'
-            )
-            input(
-                type='password'
-                class='login-input'
-                placeholder='Type password here'
-            )
+            form(action='/admin' method='POST')
+                input(
+                    type='text'
+                    class='login-input'
+                    name='adminusername'
+                    placeholder='Type username here'
+                )
+                input(
+                    type='password'
+                    class='login-input'
+                    name='adminpassword'
+                    placeholder='Type password here'
+                )
+                input(
+                    type='submit'
+                    class='login-input'
+                )
