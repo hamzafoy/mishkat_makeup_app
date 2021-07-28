@@ -209,8 +209,21 @@ body, html {
     border: 4px double #EAECEC;
 }
 
+
+.login-panel-heading {
+    font-size: 1.25em;
+    font-family: 'Shadows Into Light Two', cursive;
+    text-align: center;
+}
+
+
 .login-input {
     align-self: center;
     width: 25%;
     background-color: #CECFDF;
+    margin: 1vh 0 0;
+}
+
+.login-input:last-of-type {
+    margin: 1vh 0 3.5vh;
 }
