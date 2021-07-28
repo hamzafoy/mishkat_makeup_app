@@ -61,13 +61,15 @@ router.get('/admin', asyncHandler(async (req, res) => {
 
 
 router.post('/admin', asyncHandler(async (req, res) => {
-    res.cookie('username', req.body.adminusername);
-    res.cookie('password', req.body.adminpassword);
+    res.cookie('username', req.body.adminusername, {maxAge: 3600000});
+    res.cookie('password', req.body.adminpassword, {maxAge: 3600000});
     res.redirect('/admin');
 }))
 
 router.get('/login', asyncHandler(async (req, res) => {
-    res.render('login');
+    const user = req.cookies.username;
+    const pass = req.cookies.password;
+    ( (user == userName) && (pass == passCode) ) ? res.render('login') : res.redirect('/admin');
 }));
 
 module.exports = router;
