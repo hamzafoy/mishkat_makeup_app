@@ -1,5 +1,5 @@
 {
-  "name": "Mishkat_Makeup",
+  "name": "mishkat-makeup",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -15,10 +15,8 @@
     "cookie-parser": "^1.4.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "mysql2": "^2.2.5",
-    "pug": "^3.0.2",
-    "sequelize": "^6.6.2",
-    "sqlite3": "^5.0.2"
+    "mongoose": "^6.0.5",
+    "pug": "^3.0.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"

@@ -6,8 +6,6 @@ Activating Frameworks, Dependencies, & Middleware
 const express = require('express');
 //Requiring body-parser to help access data in request/response bodies.
 const bodyParser = require('body-parser');
-//Requiring Sequelize which will serve as the ORM between the app and the MySQL database.
-const Sequelize = require('sequelize');
 //Requiring the file system native module for Node.js
 const fs = require('fs');
 //
