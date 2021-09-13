@@ -123,6 +123,21 @@ body, html {
 
 /*--- About.pug Styling ---*/
 
+.profile-picture {
+    height: 400px;
+    width: 350px;
+    float: left;
+    margin: 0 2vw 1vh;
+}
+
+.about-text {
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 1.025em;
+    padding: 0 2vw;
+    letter-spacing: .095em;
+    line-height: 1.45em;
+}
+
 
 
 /*--- Reviews.pug Styling ---*/
