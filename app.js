@@ -20,6 +20,7 @@ Initializing, connecting, & formatting the modular application.
 
 //Exposing the application to Express' objects & methods.
 const application = express();
+application.use(express.json());
 //Ensuring that the Pug HTML template engine is used to render customer-facing views in the application.
 application.set('view engine', 'pug');
 //Plugging in the HTTP routes to the application.
