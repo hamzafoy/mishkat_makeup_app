@@ -6,5 +6,6 @@ block content
         section.login__panel
             h1.login-panel-heading Welcome Admin!
 
-            form(action="/api/review", method="post")
+            h1.login-panel-heading Submit Reviews Here:
+            form.reviews-form(action="/api/review", method="post")
                 include includes/review-form.pug
