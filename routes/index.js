@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 const fs = require('fs');
 const makeupData = require('../db/makeup.json');
-const blogData = require('../db/blog.json')
+const blogData = require('../db/blog.json');
+const Review = require('../models/Review');
 const userName = process.env.ADMIN_LOGIN_USERNAME;
 const passCode = process.env.ADMIN_LOGIN_PASSWORD;
 
@@ -34,6 +35,19 @@ router.get('/reviews', asyncHandler(async (req, res) => {
 }));
 
 
+router.post('/api/review', asyncHandler(async (req, res) => {
+    console.log(req.bod);
+    let review;
+    try {
+        review = await Review.create(req.body);
+        console.log(`Review created successfully!`);
+        res.redirect('/');
+    } catch (error) {
+        throw error;
+    }
+}));
+
+
 router.get('/blog', asyncHandler(async (req, res) => {
     res.render('blog', {blogData: blogData});
 }));
@@ -55,7 +69,7 @@ router.post('/admin', asyncHandler(async (req, res) => {
 router.get('/login', asyncHandler(async (req, res) => {
     const user = req.cookies.username;
     const pass = req.cookies.password;
-    ( (user == userName) && (pass == passCode) ) ? res.render('login') : res.redirect('/admin');
+    ( (user == userName) && (pass == passCode) ) ? res.render('login', { review: {} }) : res.redirect('/admin');
 }));
 
 module.exports = router;

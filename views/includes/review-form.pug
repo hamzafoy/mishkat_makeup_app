@@ -1,19 +1,18 @@
-  
 div
   label(for="makeupname") Makeup Name:
-  input()
+  input(type="text", name="name" value=review.name)
 div
   label(for="brand") Brand:
-  input()
+  input(type="text", name="brand" value=review.brand)
 div
   label(for="type") Type of Makeup:
-  input()
+  input(type="text", name="type" value=review.type)
 div
   label(for="price") Price (per container):
-  input()
+  input(type="text", name="price" value=review.price)
 div
   label(for="description") Description:
-  input()
+  input(type="text", name="description" value=review.description)
 input(type="submit")
 
 // Look on Review.js for commented out input form

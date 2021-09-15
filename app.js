@@ -12,12 +12,15 @@ const fs = require('fs');
 const cookieParser = require('cookie-parser');
 //
 require('dotenv').config();
+//
+const connectToDatabase = require('./config/db');
 
 
 /*
 Initializing, connecting, & formatting the modular application.
 */
 
+connectToDatabase();
 //Exposing the application to Express' objects & methods.
 const application = express();
 application.use(express.json());
