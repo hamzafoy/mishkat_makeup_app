@@ -39,22 +39,3 @@ const ReviewSchema = new Schema({
 
 const Review = mongoose.model('Review', ReviewSchema);
 module.exports = Review;
-
-/*--
-div
-  label(for="makeupname") Makeup Name:
-  input(type="text", name="makeupname" value=review.name)
-div
-  label(for="brand") Brand:
-  input(type="text", name="brand" value=review.brand)
-div
-  label(for="type") Type of Makeup:
-  input(type="text", name="type" value=review.type)
-div
-  label(for="price") Price (per container):
-  input(type="text", name="price" value=review.price)
-div
-  label(for="description") Description:
-  input(type="text", name="description" value=review.description)
-input(type="submit")
---*/

@@ -260,10 +260,20 @@ body, html {
 
 .form-div {
     display: table-row;
+    margin: .75vh 0;
 }
 
 .form-label, .form-input {
     display: table-cell;
+}
+
+.form-input, .form-textarea {
+    width: 16vw;
+}
+
+.form-label {
+    font-family: 'Raleway', sans-serif;
+    padding: 0 0 .45vh;
 }
 
 .form-textarea {

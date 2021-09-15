@@ -31,7 +31,8 @@ router.get('/about', asyncHandler(async (req, res) => {
 
 
 router.get('/reviews', asyncHandler(async (req, res) => {
-    res.render('reviews', {makeupData: makeupData});
+    let listOfReviews = await Review.find();
+    res.render('reviews', {makeupData: listOfReviews} );
 }));
 
 

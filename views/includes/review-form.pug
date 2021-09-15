@@ -1,18 +1,18 @@
 div.form-div
   label.form-label(for="makeupname") Makeup Name:
-  input.form-input(type="text", name="name" value=review.name)
+  input.form-input(type="text", name="name" placeholder="Enter the name of the reviewed makeup here. . ." value=review.name)
 div.form-div
   label.form-label(for="brand") Brand:
-  input.form-input(type="text", name="brand" value=review.brand)
+  input.form-input(type="text", name="brand" placeholder="Enter the brand of the reviewed makeup here. . ." value=review.brand)
 div.form-div
   label.form-label(for="type") Type of Makeup:
-  input.form-input(type="text", name="type" value=review.type)
+  input.form-input(type="text", name="type" placeholder="Enter what kind of makeup you reviewed here. . ." value=review.type)
 div.form-div
   label.form-label(for="price") Price (per container):
-  input.form-input(type="text", name="price" value=review.price)
+  input.form-input(type="text", name="price" placeholder="Enter the price of the reviewed makeup here. . ." value=review.price)
 div.form-div
   label.form-label(for="description") Description:
-  textarea.form-textarea(name="description" cols="22" rows="6" value=review.description)
+  textarea.form-textarea(name="description" cols="22" rows="6" placeholder="Type your full review here!" value=review.description)
 input(type="submit")
 
 // Look on Review.js for commented out input form
