@@ -44,7 +44,7 @@ router.post('/api/review', asyncHandler(async (req, res) => {
     try {
         review = await Review.create(req.body);
         console.log(`Review created successfully!`);
-        res.redirect('/');
+        res.redirect('/login');
     } catch (error) {
         throw error;
     }
@@ -57,7 +57,7 @@ router.post('/api/blog', asyncHandler(async (req, res) => {
     try {
         blog = await Blog.create(req.body);
         console.log(`Blog Post created successfully!`);
-        res.redirect('/');
+        res.redirect('/login');
     } catch (error) {
         throw error;
     }
