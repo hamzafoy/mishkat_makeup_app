@@ -22,6 +22,7 @@ function asyncHandler(cb){
 
 
 router.get('/', asyncHandler(async (req, res) => {
+    res.clearCookie('password');
     res.render('home');
 }));
 
