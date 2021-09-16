@@ -4,6 +4,7 @@ const fs = require('fs');
 const makeupData = require('../db/makeup.json');
 const blogData = require('../db/blog.json');
 const Review = require('../models/Review');
+const Blog = require('../models/Blog');
 const userName = process.env.ADMIN_LOGIN_USERNAME;
 const passCode = process.env.ADMIN_LOGIN_PASSWORD;
 
@@ -37,7 +38,7 @@ router.get('/reviews', asyncHandler(async (req, res) => {
 
 
 router.post('/api/review', asyncHandler(async (req, res) => {
-    console.log(req.bod);
+    console.log(req.body);
     let review;
     try {
         review = await Review.create(req.body);
@@ -49,8 +50,22 @@ router.post('/api/review', asyncHandler(async (req, res) => {
 }));
 
 
+router.post('/api/blog', asyncHandler(async (req, res) => {
+    console.log(req.body);
+    let blog;
+    try {
+        blog = await Blog.create(req.body);
+        console.log(`Blog Post created successfully!`);
+        res.redirect('/');
+    } catch (error) {
+        throw error;
+    }
+}));
+
+
 router.get('/blog', asyncHandler(async (req, res) => {
-    res.render('blog', {blogData: blogData});
+    let listOfBlogs = await Blog.find();
+    res.render('blog', {blogData: listOfBlogs} );
 }));
 
 
