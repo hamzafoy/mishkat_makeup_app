@@ -85,7 +85,7 @@ router.post('/admin', asyncHandler(async (req, res) => {
 router.get('/login', asyncHandler(async (req, res) => {
     const user = req.cookies.username;
     const pass = req.cookies.password;
-    ( (user == userName) && (pass == passCode) ) ? res.render('login', { review: {} }) : res.redirect('/admin');
+    ( (user == userName) && (pass == passCode) ) ? res.render('login', { review: {}, blog: {} }) : res.redirect('/admin');
 }));
 
 module.exports = router;
