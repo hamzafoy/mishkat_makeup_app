@@ -6,9 +6,9 @@ block content
         section.login__panel
             h1.login-panel-heading Welcome Admin!
 
-            h1.login-panel-heading Submit Reviews Here:
-            form.reviews-form(action="/api/review", method="post")
-                include includes/review-form.pug
-                
-            form.reviews-form(action="/api/blog", method="post")
-                include includes/blog-form.pug
+            section.admin-input
+                form.post-form(action="/api/review", method="post")
+                    include includes/review-form.pug
+                    
+                form.post-form(action="/api/blog", method="post")
+                    include includes/blog-form.pug
