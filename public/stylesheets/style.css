@@ -210,7 +210,10 @@ body, html {
 
 
 
-/*--- Admin.pug Styling ---*/
+/*-------------------------------- 
+Admin, -forms, & Login.pug Styling
+ -------------------------------*/
+
 
 .login__panel {
     display: flex;
@@ -224,16 +227,17 @@ body, html {
     border: 4px double #EAECEC;
 }
 
-.admin-input {
-    display: flex;
-    flex-direction: row;
-}
-
 
 .login-panel-heading {
     font-size: 1.25em;
     font-family: 'Shadows Into Light Two', cursive;
     text-align: center;
+}
+
+
+.admin-input {
+    display: flex;
+    flex-direction: row;
 }
 
 
@@ -243,6 +247,27 @@ body, html {
 }
 
 
+.post-form {
+    display: table;
+    margin: 0 auto;
+}
+
+
+.log-out {
+    align-self: center;
+    width: 20%;
+    margin: 6vh 0 0;
+}
+
+
+.log-out a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/*-- Admin.pug specific --*/
 .login-input {
     align-self: center;
     width: 25%;
@@ -258,10 +283,9 @@ body, html {
     border: 3.25px double #494C6F;
 }
 
-.post-form {
-    display: table;
-    margin: 0 auto;
-}
+
+/*-- Blog-Form & Review-Form specific --*/
+
 
 .form-div {
     display: table-row;
