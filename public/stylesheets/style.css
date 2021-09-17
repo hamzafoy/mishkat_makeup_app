@@ -186,6 +186,10 @@ body, html {
     border: 4px double #EAECEC;
 }
 
+.reviews__card-face p {
+    padding: 0 2vw;
+}
+
 .reviews__card-face.back {
     transform: rotateY(-180deg);
 }
