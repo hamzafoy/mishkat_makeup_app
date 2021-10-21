@@ -32,6 +32,10 @@ const ReviewSchema = new Schema({
     date: {
         type: Date,
         default: Date.now
+    },
+    src: {
+        type: String,
+        required: false
     }
 });
 

@@ -4,28 +4,17 @@ block content
     h1.reviews-heading Makeup Reviews
     div.reviews
         each val in makeupData
-            section.reviews__section
-                p.reviews-text-heading Makeup Name 
+            section.reviews__card
+                section.reviews__card-face.front
+                    img.card-foto(src=`/static/${val.src}`)
+                section.reviews__card-face.back
+                    p.reviews-text-heading Makeup Name 
                     p.reviews-text-data= val.name
-                p.reviews-text-heading Brand
+                    p.reviews-text-heading Brand
                     p.reviews-text-data= val.brand 
-                p.reviews-text-heading Type of Makeup 
+                    p.reviews-text-heading Type of Makeup 
                     p.reviews-text-data= val.type 
-                p.reviews-text-heading Description 
+                    p.reviews-text-heading Description 
                     p.reviews-text-desc= val.description 
-                p.reviews-text-heading Price 
+                    p.reviews-text-heading Price 
                     p.reviews-text-data= '$' + val.price
-        section.reviews__card
-            section.reviews__card-face.front 
-                img.card-foto(src="/static/img/too-faced.jpg")
-            section.reviews__card-face.back 
-                p.reviews-text-heading Makeup Name 
-                p.reviews-text-data Born This Way
-                p.reviews-text-heading Brand
-                p.reviews-text-data Too Faced 
-                p.reviews-text-heading Type
-                p.reviews-text-data Foundation 
-                p.reviews-text-heading Price 
-                p.reviews-text-data $40
-                p.reviews-text-heading 
-                p.reviews-text-data A foundation with a radiant finish. This foundation sets well, stays well, and doesn't cake.
