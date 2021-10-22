@@ -14,4 +14,7 @@ div.form-div
 div.form-div
   label.form-label(for="description") Description:
   textarea.form-textarea(name="description" cols="22" rows="6" placeholder="Type your full review here!" value=review.description)
+div.form-div
+  label.form-label(for="uploaded_image") Upload Photo: 
+  input.form-input(type="file", name="uploaded_image", accept="image/*")
 input(type="submit")

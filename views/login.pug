@@ -7,7 +7,7 @@ block content
             h1.login-panel-heading Welcome Admin!
 
             section.admin-input
-                form.post-form(action="/api/review", method="post")
+                form.post-form(action="/api/review", enctype="multipart/form-data", method="post")
                     include includes/review-form.pug
                     
                 form.post-form(action="/api/blog", method="post")

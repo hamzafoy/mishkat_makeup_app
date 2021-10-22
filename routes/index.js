@@ -8,6 +8,24 @@ const Blog = require('../models/Blog');
 const userName = process.env.ADMIN_LOGIN_USERNAME;
 const passCode = process.env.ADMIN_LOGIN_PASSWORD;
 
+
+//Multer to handle image file uploads
+const multer = require('multer');
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, 'public/img/')
+    },
+    filename: function (req, file, cb) {
+        cb(null, file.originalname + '.png')
+    }
+})
+let upload = multer({
+    storage: storage,
+    limits: {
+        fileSize: 5000000
+    }
+})
+
 //This is a convenient function that handles async/await.
 function asyncHandler(cb){
     return async(req, res, next) => {
@@ -38,8 +56,9 @@ router.get('/reviews', asyncHandler(async (req, res) => {
 }));
 
 
-router.post('/api/review', asyncHandler(async (req, res) => {
+router.post('/api/review', upload.single('uploaded_image'), asyncHandler(async (req, res) => {
     console.log(req.body);
+    console.log(req.file);
     let review;
     try {
         review = await Review.create(req.body);
