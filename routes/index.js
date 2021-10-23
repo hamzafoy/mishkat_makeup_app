@@ -1,15 +1,35 @@
+/*::::::::::::::::::::::::::::::::::::::::
+::::::::  Required Dependencies  :::::::::
+::::::::::::::::::::::::::::::::::::::::*/
+
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
-const makeupData = require('../db/makeup.json');
-const blogData = require('../db/blog.json');
+
+
+
+/*::::::::::::::::::::::::::::::::::::::::
+:::::  Database Models for MongoDB  ::::::
+::::::::::::::::::::::::::::::::::::::::*/
+
 const Review = require('../models/Review');
 const Blog = require('../models/Blog');
+
+
+
+/*::::::::::::::::::::::::::::::::::::::::
+:::  Hidden admin username & password  :::
+::::::::::::::::::::::::::::::::::::::::*/
+
 const userName = process.env.ADMIN_LOGIN_USERNAME;
 const passCode = process.env.ADMIN_LOGIN_PASSWORD;
 
 
-//Multer to handle image file uploads
+
+/*::::::::::::::::::::::::::::::::::::::::
+::::  Multer to handle image uploads :::::
+::::::::::::::::::::::::::::::::::::::::*/
+
 const multer = require('multer');
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -26,7 +46,12 @@ let upload = multer({
     }
 })
 
-//This is a convenient function that handles async/await.
+
+
+/*::::::::::::::::::::::::::::::::::::::::
+:::::::  Async Handler Function  :::::::::
+::::::::::::::::::::::::::::::::::::::::*/
+
 function asyncHandler(cb){
     return async(req, res, next) => {
         try {
@@ -38,6 +63,11 @@ function asyncHandler(cb){
     }
 }
 
+
+
+/*::::::::::::::::::::::::::::::::::::::::
+:::::::::::  Backend Routes  :::::::::::::
+::::::::::::::::::::::::::::::::::::::::*/
 
 router.get('/', asyncHandler(async (req, res) => {
     res.clearCookie('password');
@@ -107,5 +137,11 @@ router.get('/login', asyncHandler(async (req, res) => {
     const pass = req.cookies.password;
     ( (user == userName) && (pass == passCode) ) ? res.render('login', { review: {}, blog: {} }) : res.redirect('/admin');
 }));
+
+
+
+/*::::::::::::::::::::::::::::::::::::::::
+::::::::::  Exporting Routes  ::::::::::::
+::::::::::::::::::::::::::::::::::::::::*/
 
 module.exports = router;
