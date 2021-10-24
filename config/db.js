@@ -1,8 +1,16 @@
+/*::::::::::::::::::::::::::::::::::::::::
+::::::::  Required Dependencies  :::::::::
+::::::::::::::::::::::::::::::::::::::::*/
+
 const mongoose = require('mongoose');
 const config = require('config');
 const db = process.env.MONGODB_URI || config.get('mongoURI');
 
 
+
+/*::::::::::::::::::::::::::::::::::::::::
+:::::  Connection to Mongo Database  :::::
+::::::::::::::::::::::::::::::::::::::::*/
 
 const connectToDatabase = async () => {
   try {
@@ -22,5 +30,9 @@ const connectToDatabase = async () => {
 };
 
 
+
+/*::::::::::::::::::::::::::::::::::::::::
+::::  Exporting Database Connection  :::::
+::::::::::::::::::::::::::::::::::::::::*/
 
 module.exports = connectToDatabase;

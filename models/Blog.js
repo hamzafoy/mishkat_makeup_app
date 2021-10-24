@@ -1,12 +1,15 @@
-/*--
-Creating the schema for the MongoDB database.
-TASK: Create validations.
---*/
+/*::::::::::::::::::::::::::::::::::::::::
+::::::::  Required Dependencies  :::::::::
+::::::::::::::::::::::::::::::::::::::::*/
 
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
+
+/*::::::::::::::::::::::::::::::::::::::::
+::::::::  Schema for MongoDB dB  :::::::::
+::::::::::::::::::::::::::::::::::::::::*/
 
 const BlogSchema = new Schema({
     title: {
@@ -20,6 +23,10 @@ const BlogSchema = new Schema({
 });
 
 
+
+/*::::::::::::::::::::::::::::::::::::::::
+::::::::::  Exporting Models  ::::::::::::
+::::::::::::::::::::::::::::::::::::::::*/
 
 const Blog = mongoose.model('Blog', BlogSchema);
 module.exports = Blog;
